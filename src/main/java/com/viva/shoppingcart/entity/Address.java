@@ -7,18 +7,18 @@ import javax.persistence.Id;
 public class Address {
 	
 	@Id
-	private long id;
+	private double id;
 	private String flatno;
 	private String street;
 	private String city;
 	private String state;
 	private String country;
 	private String postalCode;
-	private long userId;
-	public long getId() {
+	private double userId;
+	public double getId() {
 		return id;
 	}
-	public void setId(long id) {
+	public void setId(double id) {
 		this.id = id;
 	}
 	public String getFlatno() {
@@ -57,10 +57,10 @@ public class Address {
 	public void setPostalCode(String postalCode) {
 		this.postalCode = postalCode;
 	}
-	public long getUserId() {
+	public double getUserId() {
 		return userId;
 	}
-	public void setUserId(long userId) {
+	public void setUserId(double userId) {
 		this.userId = userId;
 	}
 	

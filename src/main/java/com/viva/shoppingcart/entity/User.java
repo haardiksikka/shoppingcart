@@ -7,24 +7,51 @@ import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
-import com.viva.shoppingcart.enums.UserType;
+import com.viva.shoppingcart.entity.UserType;
 
 @Entity
 public class User {
 	
 	@Id
-	private long id;
+	private double id;
+	
+	private String firstname;
+	private String lastname;
+	private String msisdn;
 	private String email;
 	private String password;
+	
 	@ManyToOne
 	private Address address;
-	private UserType userType;
-	public long getId() {
+	
+	private int userType;
+	
+	
+	public String getFirstname() {
+		return firstname;
+	}
+	public void setFirstname(String firstname) {
+		this.firstname = firstname;
+	}
+	public String getLastname() {
+		return lastname;
+	}
+	public void setLastname(String lastname) {
+		this.lastname = lastname;
+	}
+	public String getMsisdn() {
+		return msisdn;
+	}
+	public void setMsisdn(String msisdn) {
+		this.msisdn = msisdn;
+	}
+	public double getId() {
 		return id;
 	}
-	public void setId(long id) {
+	public void setId(double id) {
 		this.id = id;
 	}
+	
 	public String getEmail() {
 		return email;
 	}
@@ -43,11 +70,18 @@ public class User {
 	public void setAddress(Address address) {
 		this.address = address;
 	}
-	public UserType getUserType() {
+	public int getUserType() {
 		return userType;
 	}
-	public void setUserType(UserType userType) {
+	public void setUserType(int userType) {
 		this.userType = userType;
+	}
+	
+	@Override
+	public String toString() {
+		return "User [id=" + id + ", firstname=" + firstname + ", lastname=" + lastname + ", msisdn=" + msisdn
+				+ ", email=" + email + ", password=" + password + ", address=" + address + ", userType=" + userType
+				+ "]";
 	}
 	
 }

@@ -11,14 +11,15 @@ import javax.persistence.OneToMany;
 @Entity
 public class Cart {
 	@Id
-	private long id;
+	private double id;
 	@ManyToOne
 	private Product productsInCart;
-	private long userId;
-	public long getId() {
+	private double userId;
+	
+	public double getId() {
 		return id;
 	}
-	public void setId(long id) {
+	public void setId(double id) {
 		this.id = id;
 	}
 	public Product getProductsInCart() {
@@ -27,10 +28,10 @@ public class Cart {
 	public void setProductsInCart(Product productsInCart) {
 		this.productsInCart = productsInCart;
 	}
-	public long getUserId() {
+	public double getUserId() {
 		return userId;
 	}
-	public void setUserId(long userId) {
+	public void setUserId(double userId) {
 		this.userId = userId;
 	}
 	

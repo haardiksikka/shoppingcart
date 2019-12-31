@@ -9,15 +9,16 @@ import javax.persistence.OneToMany;
 @Entity
 public class WishList {
 	@Id
-	private long id;
+	private double id;
 //	@OneToMany(targetEntity=Product.class, mappedBy="WishList", fetch=FetchType.EAGER)
 	@ManyToOne
 	private Product productsInWishList;
-	private long userId;
-	public long getId() {
+	private double userId;
+	
+	public double getId() {
 		return id;
 	}
-	public void setId(long id) {
+	public void setId(double id) {
 		this.id = id;
 	}
 	public Product getProductsInWishList() {
@@ -26,10 +27,10 @@ public class WishList {
 	public void setProductsInWishList(Product productsInWishList) {
 		this.productsInWishList = productsInWishList;
 	}
-	public long getUserId() {
+	public double getUserId() {
 		return userId;
 	}
-	public void setUserId(long userId) {
+	public void setUserId(double userId) {
 		this.userId = userId;
 	}
 	

@@ -6,17 +6,18 @@ import javax.persistence.Id;
 @Entity
 public class Product {
 	@Id
-	private long id;
+	private double id;
 	private String name;
 	private String price;
 	private static long quantity;
 	private String category;
-	private long vendorId;
+	private double vendorId;
 	private int count;
-	public long getId() {
+	
+	public double getId() {
 		return id;
 	}
-	public void setId(long id) {
+	public void setId(double id) {
 		this.id = id;
 	}
 	public String getName() {
@@ -43,10 +44,10 @@ public class Product {
 	public void setCategory(String category) {
 		this.category = category;
 	}
-	public long getVendorId() {
+	public double getVendorId() {
 		return vendorId;
 	}
-	public void setVendorId(long vendorId) {
+	public void setVendorId(double vendorId) {
 		this.vendorId = vendorId;
 	}
 	public int getCount() {

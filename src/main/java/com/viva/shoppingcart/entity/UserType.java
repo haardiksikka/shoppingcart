@@ -6,12 +6,12 @@ import javax.persistence.Id;
 @Entity
 public class UserType {
 		@Id
-		private long id;
+		private double id;
 		private String type;
-		public long getId() {
+		public double getId() {
 			return id;
 		}
-		public void setId(long id) {
+		public void setId(double id) {
 			this.id = id;
 		}
 		public String getType() {
