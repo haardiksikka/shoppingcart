@@ -39,4 +39,11 @@ public class UserController {
 		
 		return userService.addUser(user);
 	}
+	
+	@RequestMapping("/login")
+	public boolean login(@RequestBody User user) {
+		System.out.println(user);
+		return userService.login(user);
+	}
+	
 }

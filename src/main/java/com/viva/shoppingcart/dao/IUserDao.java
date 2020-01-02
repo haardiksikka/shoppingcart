@@ -8,5 +8,5 @@ import com.viva.shoppingcart.entity.User;
 
 @Repository
 public interface IUserDao extends JpaRepository<User, Double> {
-
+	public User getUserByEmail(User user);	
 }
