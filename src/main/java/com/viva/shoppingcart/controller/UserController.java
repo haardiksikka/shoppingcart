@@ -35,14 +35,14 @@ public class UserController {
 	
 	@RequestMapping("/adduser")
 	public User addUser(@RequestBody User user) {
-		System.out.println(user);
+		
 		
 		return userService.addUser(user);
 	}
 	
 	@RequestMapping("/login")
-	public boolean login(@RequestBody User user) {
-		System.out.println(user);
+	public User login(@RequestBody User user) {
+		
 		return userService.login(user);
 	}
 	

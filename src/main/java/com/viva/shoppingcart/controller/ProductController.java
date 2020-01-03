@@ -1,7 +1,10 @@
 package com.viva.shoppingcart.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -18,7 +21,11 @@ public class ProductController {
 	ProductService productService;
 	
 	@RequestMapping("/addproduct")
-	public Product addProduct(@RequestBody Product product) {
+	public Product addProduct(@RequestBody Product product) {		
 		return productService.addProduct(product);
+	}
+	@RequestMapping("/getproduct/{id}")
+	public List<Product> getProductsByVendorId(@PathVariable("id") double id){
+		return productService.getProductByVendorId(id);
 	}
 }
