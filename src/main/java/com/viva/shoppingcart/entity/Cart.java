@@ -26,6 +26,7 @@ public class Cart {
 		return productsInCart;
 	}
 	public void setProductsInCart(Product productsInCart) {
+		//this.productsInCart = new Prosuct
 		this.productsInCart = productsInCart;
 	}
 	public double getUserId() {

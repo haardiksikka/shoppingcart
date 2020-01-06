@@ -29,4 +29,11 @@ public class ProductService {
 		return productDaoImp.getProductByVendorId(id);
 	}
 	
+	public List<Product> getAllProducts(){
+		return iProductDao.findAll();
+	}
+	
+	public Product getProductById(double id) {
+		return productDaoImp.getProductById(id);
+	}
 }

@@ -28,4 +28,16 @@ public class ProductController {
 	public List<Product> getProductsByVendorId(@PathVariable("id") double id){
 		return productService.getProductByVendorId(id);
 	}
+	
+	@RequestMapping("/getallproducts")
+	public List<Product> getAllProducts(){
+		return productService.getAllProducts();
+	}
+	
+	@RequestMapping("/product/{id}")
+	public Product getProduct(@PathVariable("id") double id) {
+		System.out.println(id);
+		return productService.getProductById(id);
+	}
+	
 }

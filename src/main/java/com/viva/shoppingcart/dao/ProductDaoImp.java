@@ -28,4 +28,17 @@ public class ProductDaoImp {
 			return null;
 		}
 	}
+	
+	public Product getProductById(double id) {
+		String querystr="From Product Where id=:id";
+		System.out.println(id);
+		Query query = entityManager.createQuery(querystr);
+		query.setParameter("id", id);
+		try {
+			return (Product) query.getSingleResult();
+		}
+		catch(NoResultException nre) {
+			return null;
+		}
+	}
 }
