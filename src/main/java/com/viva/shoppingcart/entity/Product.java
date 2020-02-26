@@ -9,7 +9,7 @@ public class Product {
 	private double id;
 	private String name;
 	private String price;
-	private static long quantity;
+	public static long quantity;
 	private String category;
 	private double vendorId;
 	private int count;
@@ -55,6 +55,11 @@ public class Product {
 	}
 	public void setCount(int count) {
 		this.count = count;
+	}
+	@Override
+	public String toString() {
+		return "Product [id=" + id + ", name=" + name + ", price=" + price + ", category=" + category + ", vendorId="
+				+ vendorId + ", count=" + count + "]";
 	}
 	
 }

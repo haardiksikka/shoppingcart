@@ -21,7 +21,8 @@ public class ProductController {
 	ProductService productService;
 	
 	@RequestMapping("/addproduct")
-	public Product addProduct(@RequestBody Product product) {		
+	public Product addProduct(@RequestBody Product product) {
+		System.out.println(product);
 		return productService.addProduct(product);
 	}
 	@RequestMapping("/getproduct/{id}")
